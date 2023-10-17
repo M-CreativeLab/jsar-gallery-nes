@@ -1,22 +1,18 @@
 {
-  "name": "your-jsar-widget-name",
-  "displayName": "Display Name",
+  "name": "jsar-gallery-nes",
   "version": "1.0.0",
-  "description": "The template widget",
+  "description": "The NES emulator in a 3D space.",
   "main": "main.xsml",
   "scripts": {},
   "files": [
-    "icon.png",
     "main.xsml",
-    "lib/*.ts",
-    "model/welcome.glb"
+    "*.ts",
+    "jsnes/**/*",
+    "roms/*.nes.bin"
   ],
-  "icon3d": {
-    "base": "./model/welcome.glb"
-  },
-  "author": "Yorkie Liu <yorkiefixer@gmail.com>",
-  "license": "Apache-2.0",
+  "author": "Yorkie Makoto <yorkiefixer@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
-    "@yodaos-jsar/types": "^0.1.4"
+    "@yodaos-jsar/types": "^0.1.5"
   }
 }
