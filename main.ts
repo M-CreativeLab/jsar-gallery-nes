@@ -63,6 +63,7 @@ var nes = new NES({
     }
     const imageData = new ImageData(framebuffer_u8, SCREEN_WIDTH, SCREEN_HEIGHT);
     context2d.putImageData(imageData, 0, 0);
+    groundTex.update();
   },
   onAudioSample: function (left, right) {
     // ... play audio sample
@@ -72,6 +73,7 @@ var nes = new NES({
 const romData = Buffer.from(marioBin).toString('binary');
 nes.loadROM(romData);
 
+// setInterval(() => nes.frame(), 16);
 scene.registerAfterRender(function () {
   nes.frame();
 });
